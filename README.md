@@ -78,24 +78,6 @@ Install them using pip:
     *   To start the translation press the Start Translation button.
     *   To stop the translation press the Stop Translation button.
 
-## 📂 Troubleshooting Upload Issues
-
-If you encounter issues uploading certain files, even after zipping them, consider the following:
-
-*   **File Size Limits:** Check if your hosting platform (e.g., GitHub, Streamlit Cloud) has file size restrictions. Large audio or data files can exceed these limits. Consider using cloud storage (like AWS S3, Google Cloud Storage) and referencing the files via URLs.
-*   **File Types:** Some platforms restrict certain file types for security reasons. If you're using unusual file extensions, try renaming them or converting them to more common formats (e.g., `.txt`, `.csv`, `.mp3`).
-*   **Repository Size:**  Large repositories can be slow to clone and deploy. Remove unnecessary files, especially large datasets or temporary files. Use `.gitignore` to prevent tracking of specific files and folders.
-*   **Zipping Issues:** Ensure your zip file is correctly formatted. Try using different zipping utilities or compression levels. Sometimes, corrupted zip files can cause upload problems.
-*   **Streamlit Cloud:** If deploying to Streamlit Cloud, review their specific file size and dependency management guidelines.  Make sure all dependencies are listed in `requirements.txt`.
-*   **Git Large File Storage (LFS):** If you are working with large media files use LFS
-
-    ```
-    git lfs install
-    git lfs track "*.mp3"
-    git add .gitattributes
-    git commit -m "Track .mp3 files with LFS"
-    git push origin main
-    ```
 
 ## 🗂️ Code Structure
 
